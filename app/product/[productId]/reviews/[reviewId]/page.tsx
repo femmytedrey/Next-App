@@ -6,6 +6,17 @@ export type ReviewProps = {
     productId: string;
   };
 };
+
+function getRandomInt(count: number) {
+  return Math.floor(Math.random() * count);
+}
+
+const random = getRandomInt(1);
+console.log(random)
+
+if (random === 0) {
+  throw new Error("Error loading review");
+}
 export default function ReviewId({ params }: ReviewProps) {
   if (parseInt(params.reviewId) > 1000) {
     notFound();
