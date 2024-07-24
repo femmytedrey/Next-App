@@ -1,4 +1,9 @@
+"use client"
 import { notFound } from "next/navigation";
+
+function getRandomNumber(count: number) {
+  return Math.floor(Math.random() * count)
+}
 
 export type ReviewProps = {
   params: {
@@ -6,18 +11,12 @@ export type ReviewProps = {
     productId: string;
   };
 };
-
-function getRandomInt(count: number) {
-  return Math.floor(Math.random() * count);
-}
-
-const random = getRandomInt(1);
-console.log(random)
-
-if (random === 0) {
-  throw new Error("Error loading review");
-}
 export default function ReviewId({ params }: ReviewProps) {
+  // const random = getRandomNumber(2)
+
+  // if(random === 1){
+  //   throw new Error("Error loading review")
+  // }
   if (parseInt(params.reviewId) > 1000) {
     notFound();
   }

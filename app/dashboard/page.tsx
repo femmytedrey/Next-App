@@ -1,3 +1,4 @@
+import demo from './demo'
 const ade = function BarChart() {
   return (
     <div>
@@ -7,5 +8,11 @@ const ade = function BarChart() {
 };
 
 export default function PieChart() {
-  return <div>{ade()}</div>;
+  return (
+    <div>
+      <div>{ade()}</div>
+      {/* display demo */}
+      <div>{demo()}</div>
+    </div>
+  );
 }

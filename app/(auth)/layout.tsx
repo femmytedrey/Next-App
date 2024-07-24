@@ -14,6 +14,7 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
+  //console.log(pathname)
   const [input, setInput] = useState("");
   return (
     <div>
@@ -24,11 +25,13 @@ export default function AuthLayout({
       />
       {navLinks.map((link) => {
         const isActive = pathname.startsWith(link.href);
+         //console.log('isActive: ', isActive)
         return (
           <Link
             href={link.href}
             key={link.name}
             className={isActive ? "font-bold mr-4" : "text-blue-500 mr-4"}
+            //className={`${link.href === pathname ? 'text-red-500 font-bold mr-4': 'text-black ml-2'}`}
           >
             {link.name}
           </Link>

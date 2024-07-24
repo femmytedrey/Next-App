@@ -1,3 +1,7 @@
-export default function Loading(){
-    return <div>Loading...</div>
+export default function loading (){
+    return(
+        <div>
+            <h1 className="text-xl">Loading...</h1>
+        </div>
+    )
 }

@@ -19,6 +19,7 @@ export const generateMetadata = async ({params}: {params: {productId: string}}):
 
 
 
+
 export default function ProductId({ params }: { params: { productId: string } }) {
   let message;
   switch (params.productId) {
